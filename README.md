@@ -80,14 +80,20 @@ and writes are bound by the synchronous SD card write behind each request.
 
 ## Usage
 
-1. Create a scratch image on the MiSTer. **Write tests overwrite it.** Use at
-   least 1 GB so the ARM's page cache cannot hide the SD card; a fully written
-   file (not a sparse one) gives representative write numbers:
+1. Put a scratch image on the card. **Write tests overwrite it.** The easy
+   way: extract `releases/DiskIOTest_scratch_1024M.zip` onto the root of the
+   SD card; it unpacks to `games/DiskIOTest/scratch_1024M.img` (1 GB of
+   zeros, about 1 MB zipped) plus a short README. Or create one on the
+   MiSTer:
 
    ```bash
    mkdir -p /media/fat/games/DiskIOTest
    dd if=/dev/zero of=/media/fat/games/DiskIOTest/scratch_1024M.img bs=1M count=1024
    ```
+
+   Use at least 1 GB so the ARM's page cache cannot hide the SD card, and make
+   sure the file is really written out (not sparse) or write numbers will be
+   unrepresentative.
 
 2. Copy `releases/DiskIOTest_16bit_*.rbf` (16-bit hps_io bus, what current
    cores use) and/or `releases/DiskIOTest_8bit_*.rbf` (8-bit bus, the classic
@@ -148,6 +154,7 @@ loads the core. `scripts/screenshot.sh` grabs a screenshot through the
 MiSTer Remote API. Copy `scripts/local.env.sample` to `scripts/local.env` for
 machine settings.
 
+`tools/make_scratch_zip.py` rebuilds the scratch image archive in `releases/`.
 The static screen, string table and field positions are generated:
 `tools/gen_screen.py` writes `rtl/screen_*.hex`, `rtl/strings.hex` and
 `rtl/fields.svh`; `tools/gen_font.py` builds the 8x8 font ROM from
