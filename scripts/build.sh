@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 # Compile DiskIOTest with Quartus 17.0 and copy the rbf into releases/.
-#   scripts/build.sh          16-bit hps_io bus (revision DiskIOTest)
+#   scripts/build.sh          16-bit hps_io bus (revision DiskIOTest_16bit)
 #   scripts/build.sh 8        8-bit hps_io bus  (revision DiskIOTest_8bit)
 #   scripts/build.sh all      both, one after the other
 # Machine settings (QUARTUS_BIN, ...) come from scripts/local.env if present.
 set -u
 case "${1:-16}" in
 	8)   REVS="DiskIOTest_8bit" ;;
-	all) REVS="DiskIOTest DiskIOTest_8bit" ;;
-	*)   REVS="DiskIOTest" ;;
+	all) REVS="DiskIOTest_16bit DiskIOTest_8bit" ;;
+	*)   REVS="DiskIOTest_16bit" ;;
 esac
 cd "$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)" || exit 1
 [ -r scripts/local.env ] && . scripts/local.env

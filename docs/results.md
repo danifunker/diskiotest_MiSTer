@@ -5,7 +5,7 @@ DE10-nano, Main_MiSTer (danifunker fork, Aug 2026), stock 58 GB exFAT SD card
 2 s per test, queue depth 1, run on 2026-09-06.  Three views of the same
 image:
 
-* **A. DiskIOTest core, 16-bit hps_io bus** (`releases/DiskIOTest_20260906.rbf`)
+* **A. DiskIOTest core, 16-bit hps_io bus** (`releases/DiskIOTest_16bit_20260906.rbf`)
 * **B. DiskIOTest core, 8-bit hps_io bus** (`releases/DiskIOTest_8bit_20260906.rbf`)
 * **C. Native Linux on the MiSTer's ARM** (`tools/diskio_bench.py`, buffered
   I/O with `O_SYNC` like Main_MiSTer, one syscall per transfer, log in

@@ -89,8 +89,8 @@ and writes are bound by the synchronous SD card write behind each request.
    dd if=/dev/zero of=/media/fat/games/DiskIOTest/scratch_1024M.img bs=1M count=1024
    ```
 
-2. Copy `releases/DiskIOTest_*.rbf` (16-bit hps_io bus, what current cores
-   use) and/or `releases/DiskIOTest_8bit_*.rbf` (8-bit bus, the classic
+2. Copy `releases/DiskIOTest_16bit_*.rbf` (16-bit hps_io bus, what current
+   cores use) and/or `releases/DiskIOTest_8bit_*.rbf` (8-bit bus, the classic
    `WIDE=0` path of older 8-bit cores) to `/media/fat/_Utility/` and start
    one. Both share the same settings and mounted image, and an image written
    by one build verifies in the other.
@@ -137,7 +137,7 @@ SoC and the file system.
 ## Building
 
 Quartus Prime 17.0.x (Lite is fine). The project has two revisions built
-from the same sources: `DiskIOTest` (16-bit hps_io bus) and `DiskIOTest_8bit`
+from the same sources: `DiskIOTest_16bit` (16-bit hps_io bus) and `DiskIOTest_8bit`
 (the `DISKIO_BUS8` macro selects `WIDE=0`; the ARM samples the width once per
 core start, so it has to be a build option). `scripts/build.sh` compiles the
 16-bit one, `scripts/build.sh 8` the 8-bit one, `scripts/build.sh all` both,

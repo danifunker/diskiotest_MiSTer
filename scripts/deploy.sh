@@ -2,7 +2,7 @@
 # Push the rbf to the MiSTer, make sure a scratch image exists, pre-write the
 # per-slot mount memory so the image auto-mounts, and load the core.
 #
-#   scripts/deploy.sh [path/to/DiskIOTest.rbf | path/to/DiskIOTest_8bit.rbf]
+#   scripts/deploy.sh [path/to/DiskIOTest_16bit.rbf | path/to/DiskIOTest_8bit.rbf]
 #
 # Settings (scripts/local.env or environment): MISTER_HOST, MISTER_SSH_KEY,
 # IMG_MB (scratch image size, default 1024).
@@ -12,7 +12,7 @@ cd "$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 HOST="${MISTER_HOST:-192.168.99.92}"
 KEY="${MISTER_SSH_KEY:-}"
 IMG_MB="${IMG_MB:-1024}"
-RBF="${1:-output_files/DiskIOTest.rbf}"
+RBF="${1:-output_files/DiskIOTest_16bit.rbf}"
 
 SSH="ssh -o BatchMode=yes ${KEY:+-i $KEY} root@$HOST"
 SCP="scp -o BatchMode=yes ${KEY:+-i $KEY}"

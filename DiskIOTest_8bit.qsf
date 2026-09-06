@@ -50,7 +50,7 @@ set_global_assignment -name PHYSICAL_SYNTHESIS_ASYNCHRONOUS_SIGNAL_PIPELINING ON
 set_global_assignment -name ALM_REGISTER_PACKING_EFFORT MEDIUM
 set_global_assignment -name SEED 1
 
-# 8-bit hps_io bus variant of DiskIOTest (same sources, see DiskIOTest.sv)
+# 8-bit hps_io bus variant (same sources as DiskIOTest_16bit, see DiskIOTest.sv)
 set_global_assignment -name VERILOG_MACRO "DISKIO_BUS8=1"
 
 #set_global_assignment -name VERILOG_MACRO "MISTER_FB=1"
