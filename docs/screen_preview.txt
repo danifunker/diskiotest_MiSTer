@@ -1,0 +1,30 @@
+
+   MiSTer Disk I/O Benchmark   DiskIOTest
+   ──────────────────────────────────────────────────────────────────────────
+   Image: ####### MB   Write tests: ########   Time/test: # s   Bus: ######
+
+                 SEQ READ        SEQ WRITE         RND READ        RND WRITE
+   Transfer      KB/s   IOPS      KB/s   IOPS      KB/s   IOPS      KB/s   IOPS
+   ──────────────────────────────────────────────────────────────────────────
+    512B   ####### ######   ####### ######   ####### ######   ####### ######
+     1KB   ####### ######   ####### ######   ####### ######   ####### ######
+     2KB   ####### ######   ####### ######   ####### ######   ####### ######
+     4KB   ####### ######   ####### ######   ####### ######   ####### ######
+     8KB   ####### ######   ####### ######   ####### ######   ####### ######
+    16KB   ####### ######   ####### ######   ####### ######   ####### ######
+    32KB   ####### ######   ####### ######   ####### ######   ####### ######
+    64KB   ####### ######   ####### ######   ####### ######   ####### ######
+     1MB   ####### ######   ####### ######   ####### ######   ####### ######
+     4MB   ####### ######   ####### ######   ####### ######   ####### ######
+   ──────────────────────────────────────────────────────────────────────────
+   Status: #############    Test ##/##   ######### ####   [################]
+   Requests: ########   KB: ########   LBA: #########   Errors: ###   Run: ##
+   Latency us:  avg #######  min #######  max #######       Elapsed: ##### s
+   Verify:  ok ########   bad ######   unsigned ########
+   HPS bus only (8KB reads from ARM cache):  ####### KB/s  ###### IOPS
+
+   hps_io moves 16KB per request; 32KB..4MB rows are back-to-back 16KB requests.
+   512B = Mac LC SCSI pattern, 16KB = IDE READ MULTIPLE. Same ARM path for all.
+   Use a >= 1GB scratch image (ARM page cache). Write tests overwrite the image!
+   OSD: mount / options / restart.   Enter or gamepad button = restart.
+

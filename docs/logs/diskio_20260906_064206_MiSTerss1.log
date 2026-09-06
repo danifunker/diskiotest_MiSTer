@@ -1,0 +1,80 @@
+==============================================================================
+   MiSTer Disk I/O Benchmark   diskio_bench.py (native Linux)   2026-09-06 06:42:06
+==============================================================================
+   Host: MiSTerss1   Linux 5.15.1-MiSTer armv7l   2 CPU   492 MB RAM   Python 3.9.6
+   CPU:  ARMv7 Processor rev 0 (v7l)
+   File: /media/fat/games/DiskIOTest/scratch_1024M.img   1024 MB
+   Mount: /media/fat /dev/mmcblk0p1 exfat  rw,noatime,nodiratime,sync,dirsync,fmask=0022,dmask=0022,iocharset=utf8,namecase=0,errors=remount-ro
+   Flags: buffered O_SYNC   Time/test: 2 s   Chunk: whole transfer per syscall   Writes: ENABLED (file is overwritten)
+
+   syscall floor (8KB reads from page cache):   183637 KB/s   22955 IOPS   avg 33 us
+
+   SEQ READ   512B    12525 KB/s   25050 IOPS   n=50101  lat us avg       27  min       22  max     1159
+   SEQ WRITE  512B      290 KB/s     580 IOPS   n=1161   lat us avg     1703  min     1239  max    15734
+   RND READ   512B      715 KB/s    1429 IOPS   n=2859   lat us avg      648  min       28  max    12172
+   RND WRITE  512B      146 KB/s     291 IOPS   n=583    lat us avg     3366  min     1351  max    16446
+   SEQ READ    1KB    23185 KB/s   23185 IOPS   n=46505  lat us avg       30  min       23  max     6822
+   SEQ WRITE   1KB      649 KB/s     649 IOPS   n=1298   lat us avg     1521  min     1047  max     4981
+   RND READ    1KB     1464 KB/s    1464 IOPS   n=2928   lat us avg      632  min       29  max    12900
+   RND WRITE   1KB      361 KB/s     361 IOPS   n=722    lat us avg     2710  min     1087  max    15424
+   SEQ READ    2KB    22799 KB/s   11399 IOPS   n=22799  lat us avg       72  min       25  max     9986
+   SEQ WRITE   2KB      353 KB/s     176 IOPS   n=362    lat us avg     5647  min     1331  max    71381
+   RND READ    2KB     2734 KB/s    1367 IOPS   n=2735   lat us avg      678  min       30  max     8768
+   RND WRITE   2KB      232 KB/s     116 IOPS   n=232    lat us avg     8569  min     1137  max    66822
+   SEQ READ    4KB    24119 KB/s    6030 IOPS   n=12067  lat us avg      150  min       28  max    10683
+   SEQ WRITE   4KB     2299 KB/s     575 IOPS   n=1150   lat us avg     1719  min     1239  max    16973
+   RND READ    4KB     5961 KB/s    1490 IOPS   n=2991   lat us avg      616  min       33  max     8105
+   RND WRITE   4KB     1395 KB/s     349 IOPS   n=698    lat us avg     2803  min     1222  max    14080
+   SEQ READ    8KB    22754 KB/s    2844 IOPS   n=5696   lat us avg      335  min       34  max    13676
+   SEQ WRITE   8KB     3814 KB/s     477 IOPS   n=954    lat us avg     2075  min     1426  max    13043
+   RND READ    8KB     8608 KB/s    1076 IOPS   n=2153   lat us avg      873  min       40  max    12413
+   RND WRITE   8KB     2486 KB/s     311 IOPS   n=622    lat us avg     3153  min     1432  max    14662
+   SEQ READ   16KB    22882 KB/s    1430 IOPS   n=2861   lat us avg      679  min       48  max    14114
+   SEQ WRITE  16KB     8291 KB/s     518 IOPS   n=1037   lat us avg     1906  min     1741  max    12831
+   RND READ   16KB    12502 KB/s     781 IOPS   n=1564   lat us avg     1220  min       53  max    13468
+   RND WRITE  16KB     4694 KB/s     293 IOPS   n=587    lat us avg     3339  min     1771  max    15089
+   SEQ READ   32KB    21644 KB/s     676 IOPS   n=1353   lat us avg     1455  min       73  max    12734
+   SEQ WRITE  32KB    11244 KB/s     351 IOPS   n=703    lat us avg     2820  min     2423  max    10515
+   RND READ   32KB    14720 KB/s     460 IOPS   n=920    lat us avg     2106  min       83  max    13248
+   RND WRITE  32KB     7567 KB/s     236 IOPS   n=473    lat us avg     4155  min     2511  max    11414
+   SEQ READ   64KB    22385 KB/s     350 IOPS   n=700    lat us avg     2832  min      145  max    19683
+   SEQ WRITE  64KB    13729 KB/s     215 IOPS   n=430    lat us avg     4635  min     4138  max    11526
+   RND READ   64KB    17949 KB/s     280 IOPS   n=561    lat us avg     3489  min      147  max    14508
+   RND WRITE  64KB    10428 KB/s     163 IOPS   n=326    lat us avg     6055  min     4169  max    18620
+   SEQ READ    1MB    24834 KB/s      24 IOPS   n=49     lat us avg    41198  min    16752  max    80015
+   SEQ WRITE   1MB    11394 KB/s      11 IOPS   n=25     lat us avg    89843  min    55484  max   476791
+   RND READ    1MB    28516 KB/s      28 IOPS   n=57     lat us avg    35800  min     2446  max    67801
+   RND WRITE   1MB     7566 KB/s       7 IOPS   n=15     lat us avg   135246  min    59488  max   523402
+   SEQ READ    4MB    25736 KB/s       6 IOPS   n=13     lat us avg   159123  min   140916  max   174005
+   SEQ WRITE   4MB    18194 KB/s       4 IOPS   n=9      lat us avg   225101  min   216295  max   244607
+   RND READ    4MB    25280 KB/s       6 IOPS   n=13     lat us avg   161889  min    22630  max   221682
+   RND WRITE   4MB    17918 KB/s       4 IOPS   n=9      lat us avg   228507  min   222398  max   241840
+
+                SEQ READ        SEQ WRITE         RND READ        RND WRITE
+   Transfer     KB/s   IOPS      KB/s   IOPS      KB/s   IOPS      KB/s   IOPS
+   --------------------------------------------------------------------------
+    512B       12525  25050       290    580       715   1429       146    291
+     1KB       23185  23185       649    649      1464   1464       361    361
+     2KB       22799  11399       353    176      2734   1367       232    116
+     4KB       24119   6030      2299    575      5961   1490      1395    349
+     8KB       22754   2844      3814    477      8608   1076      2486    311
+    16KB       22882   1430      8291    518     12502    781      4694    293
+    32KB       21644    676     11244    351     14720    460      7567    236
+    64KB       22385    350     13729    215     17949    280     10428    163
+     1MB       24834     24     11394     11     28516     28      7566      7
+     4MB       25736      6     18194      4     25280      6     17918      4
+   --------------------------------------------------------------------------
+
+   Latency us (avg / min / max):
+    512B       27/    22/   1159    1703/  1239/  15734     648/    28/  12172    3366/  1351/  16446
+     1KB       30/    23/   6822    1521/  1047/   4981     632/    29/  12900    2710/  1087/  15424
+     2KB       72/    25/   9986    5647/  1331/  71381     678/    30/   8768    8569/  1137/  66822
+     4KB      150/    28/  10683    1719/  1239/  16973     616/    33/   8105    2803/  1222/  14080
+     8KB      335/    34/  13676    2075/  1426/  13043     873/    40/  12413    3153/  1432/  14662
+    16KB      679/    48/  14114    1906/  1741/  12831    1220/    53/  13468    3339/  1771/  15089
+    32KB     1455/    73/  12734    2820/  2423/  10515    2106/    83/  13248    4155/  2511/  11414
+    64KB     2832/   145/  19683    4635/  4138/  11526    3489/   147/  14508    6055/  4169/  18620
+     1MB    41198/ 16752/  80015   89843/ 55484/ 476791   35800/  2446/  67801  135246/ 59488/ 523402
+     4MB   159123/140916/ 174005  225101/216295/ 244607  161889/ 22630/ 221682  228507/222398/ 241840
+
+   Total run 82 s.  Log: /media/fat/games/DiskIOTest/diskio_20260906_064206_MiSTerss1.log
